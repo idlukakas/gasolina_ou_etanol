@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">Tip Calculator Fatec Ipi Noite</string>
     <string name="enter_amount">Type bill amount</string>
-    <string name="tip_percentage">15%</string>
-    <string name="tip">Tip</string>
+    <string name="gas_price">Gas price</string>
+    <string name="ethanol_price">Ethanol price</string>
+    <string name="tip">It`s bette to use</string>
     <string name="total">Total</string>
+    <string name="gas">Gas</string>
+    <string name="ethanol">Ethanol</string>
 </resources>

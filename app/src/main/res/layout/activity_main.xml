@@ -1,48 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GridLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:columnCount="2"
+    android:columnCount="1"
     android:rowCount="4"
     android:useDefaultMargins="true">
 
-    <EditText
-        android:digits="0123456789"
-        android:maxLength="6"
-        android:layout_columnSpan="2"
-        android:layout_column="0"
-        android:layout_row="0"
-        android:id="@+id/amountEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number" />
 
     <TextView
-        android:id="@+id/amountTextView"
+        android:id="@+id/percentEthanolTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_row="0"
-        android:layout_column="0"
-        android:layout_columnSpan="2"
-        android:layout_gravity="fill_horizontal"
-        android:background="@color/amount_background"
-        android:elevation="@dimen/elevation"
-        android:hint="@string/enter_amount"
-        android:padding="@dimen/textview_padding"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-    <TextView
-        android:id="@+id/percentTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right|center_vertical"
-        android:text="@string/tip_percentage" />
+        android:layout_gravity="left"
+        android:text="@string/ethanol_price" />
 
     <SeekBar
-        android:id="@+id/percentSeekBar"
+        android:id="@+id/percentEthanolSeekBar"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/seekbar_height"
         android:layout_gravity="fill_horizontal"
@@ -50,36 +27,53 @@
         android:progress="15" />
 
     <TextView
-        android:id="@+id/tipLabelTextView"
+        android:id="@+id/percentGasTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:text="@string/tip" />
+        android:layout_gravity="left"
+        android:text="@string/gas_price" />
 
-    <TextView
+
+    <SeekBar
+        android:id="@+id/percentGasSeekBar"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/seekbar_height"
+        android:layout_gravity="fill_horizontal"
+        android:max="30"
+        android:progress="15" />
+
+    <android.support.design.widget.TextInputLayout
         android:id="@+id/tipTextView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="46dp"
         android:layout_gravity="fill_horizontal"
         android:background="@color/result_background"
         android:elevation="@dimen/elevation"
         android:gravity="center"
-        android:padding="@dimen/textview_padding" />
+        android:hint="@string/tip"
+        android:padding="@dimen/textview_padding"
+        app:helperTextEnabled="false"
+        app:hintEnabled="true" />
 
-    <TextView
-        android:id="@+id/totalLabelTextView"
+    <ImageView
+        android:id="@+id/ethanolImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="266dp"
+        android:visibility="visible"
+        app:srcCompat="@drawable/ethanol"
+        tools:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/gasImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:text="@string/total" />
+        android:visibility="visible"
+        app:srcCompat="@drawable/gasolina"
+        tools:visibility="gone" />
 
-    <TextView
-        android:id="@+id/totalTextView"
-        android:layout_width="wrap_content"
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="fill_horizontal"
-        android:background="@color/result_background"
-        android:elevation="@dimen/elevation"
-        android:gravity="center"
-        android:padding="@dimen/textview_padding" />
+        android:hint="hint" />
+
 </GridLayout>
